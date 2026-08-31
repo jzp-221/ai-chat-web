@@ -2,6 +2,10 @@
 
 一个使用 React、TypeScript 与 FastAPI 开发的 AI 对话项目。项目支持多轮对话、历史会话管理、模型选择和 SSE 流式回复，并提供 Docker + Nginx 部署配置。
 
+在线演示：<https://jzp-221.github.io/ai-chat-web/>
+
+> 在线演示使用前端 Mock 流式接口，不包含任何大模型密钥；本地运行时可以连接 FastAPI 后端。
+
 ## 功能
 
 - 新建、切换、删除和清空历史会话
