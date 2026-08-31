@@ -4,7 +4,9 @@ export const MODEL_OPTIONS: Array<{ id: ModelId; name: string }> = [
   { id: 'mock-fast', name: 'Mock Fast' },
   { id: 'mock-balanced', name: 'Mock Balanced' },
   { id: 'mock-creative', name: 'Mock Creative' },
-  { id: 'real-ai', name: 'Real AI（后端）' },
+  ...(import.meta.env.VITE_CHAT_MODE === 'mock'
+    ? []
+    : [{ id: 'real-ai' as const, name: 'Real AI（后端）' }]),
 ]
 
 export function getMockDelay(model: ModelId) {
